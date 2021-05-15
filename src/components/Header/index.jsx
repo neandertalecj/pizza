@@ -58,7 +58,7 @@ const Header = ({ menu, logoUrl, franchise }) => {
             </a>
           </div>
 
-          <div className="relative w-full">
+          <div className="relative w-full lg:w-auto">{/* */}
 
             {/* Hamburger */}
             <div className={`bg-red-700 lg:hidden w-full flex justify-center p-1  mb-2 ${menuMode && 'border-b-4'}`}>

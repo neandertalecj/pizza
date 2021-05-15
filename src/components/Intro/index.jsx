@@ -13,6 +13,7 @@ const Intro = () => {
   <div className="relative bg-bgintroimage overflow-hidden flex items-center justify-center bg-black h-96 bg-center bg-cover">
     <video
       className="w-full absolute left-0 right-0 z-10 top-0 h-full object-cover"
+      poster="/images/me-n-eds-home-1.jpg"
       ref={videoRef}
       loop
       muted
