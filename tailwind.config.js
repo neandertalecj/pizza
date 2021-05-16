@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      minWidth: {
+        '90px': '90px',
+      },
       padding: {
         '159': '159px',
         '191': '191px',
@@ -34,5 +37,7 @@ module.exports = {
       display: ['hover', 'focus', 'group-hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
