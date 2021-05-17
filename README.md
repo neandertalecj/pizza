@@ -5,6 +5,9 @@ DELETED pugecss from configuration for trying on vercel purge: [],
 './pages/**/\*.{js,ts,jsx,tsx}', './components/**/\*.{js,ts,jsx,tsx}'
 !!!!!!!
 
+deployed:
+https://pizza-blush-five.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
