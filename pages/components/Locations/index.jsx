@@ -12,7 +12,7 @@ const Locations = () => {
           View all locations
         </div>
      
-        <div className="border border-black mx-10">
+        <div className="border border-black">
           <LocationForm />
         </div>
 

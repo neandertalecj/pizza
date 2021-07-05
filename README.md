@@ -42,3 +42,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+// const data = {
+// logoUrl: '/images/meneds-logo-header1-1.png',
+// franchise: 'franchise now!',
+// menu: [
+// {id: 1, item: 'menu', submenu: null},
+// {id: 2, item: 'locations', submenu: null},
+// {id: 3, item: 'grills', submenu: [
+// {id: 'g1', item: 'coney island', submenu: null},
+// {id: 'g2', item: 'victory grill', submenu: null}
+// ]},
+// {id: 4, item: 'on-taps', submenu: null},
+// {id: 5, item: 'pizza truck', submenu: null},
+// {id: 6, item: 'careers', submenu: null},
+// {id: 7, item: 'franchising', submenu: null},
+// {id: 8, item: 'school', submenu: null},
+// {id: 9, item: 'order online', submenu: null}
+// ]
+// }
