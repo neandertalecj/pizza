@@ -24,7 +24,7 @@ const LocationForm = () => {
     >
       {({ isSubmitting }) => (
         <Form className="">
-          <div className="container flex flex-col md:flex-row md:items-baseline justify-center px-6 py-8 text-xsm font-roboto font-medium text-gray-600 uppercase">
+          <div className="container flex flex-col md:flex-row md:items-baseline justify-center px-6 py-2 text-xsm font-roboto font-medium text-gray-600 uppercase">
 
             <div className="">
               <div className="flex flex-col md:flex-row md:items-center">

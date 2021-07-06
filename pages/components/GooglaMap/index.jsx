@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react'
 import useSWR from 'swr'
 
 async function fetchData(url) {
-  // console.log('fetchData', url)
-
   const res = await fetch(url)
   return res.json()
 }
 
 export default function GoogleMap () {
-
   const { data, error } = useSWR('/api/points', fetchData)
+  const baseUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDSHR1zHFPffAcFIsPOfEXAoPHandE31Ic&q=Space+Needle,Seattle+WA'
+  let lat = '36.803922'
+  let lng = '-119.790896'
+  let url = `${baseUrl}&center=${lat}%2C${lng}`
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
-  // console.log('Google Map', data)
 
   return (
     <div className="flex container mx-auto mt-5 mb-10">
@@ -38,13 +37,9 @@ export default function GoogleMap () {
       <div className="w-2/3">
         <iframe
           className="w-full h-96"
-          // width="600"
-          // height="450"
-          // style="border:0"
           style={{border: '0'}}
           loading="lazy"
-          // allowfullscreen
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSHR1zHFPffAcFIsPOfEXAoPHandE31Ic&q=Space+Needle,Seattle+WA">
+          src={url}>
         </iframe>
       </div>
     </div>

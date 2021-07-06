@@ -1,5 +1,8 @@
+import React from 'react'
+
 const Nav = ({ restMenu }) => {
-  const { item, submenu } = restMenu
+  const { item, submenu } = restMenu || {}
+  console.log('NAV', restMenu)
   
   return <>
     <li className="group px-4 relative">
@@ -11,7 +14,7 @@ const Nav = ({ restMenu }) => {
 
         {submenu && <div className="absolute top-7 right-0 left-1 flex justify-center">
           {/* Tringle */}
-          <div className=" hidden  w-3 overflow-hidden lg:inline-block">
+          <div className="hidden  w-3 overflow-hidden lg:inline-block">
             <div className="h-1.5 w-1.5 bg-white -rotate-45 transform origin-top-left"></div>
           </div>
         </div>}
@@ -28,4 +31,4 @@ const Nav = ({ restMenu }) => {
   </>
 }
 
-export default Nav
+export default React.memo(Nav)

@@ -1,5 +1,5 @@
 const Card = ({ item }) => {
-  const { promote, url2, url1, now } = item
+  const { promote, url2, url1, now } = item || {}
   
   return (
     <div className="relative group  cursor-pointer">
