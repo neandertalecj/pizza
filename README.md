@@ -6,7 +6,10 @@ DELETED pugecss from configuration for trying on vercel purge: [],
 !!!!!!!
 
 deployed:
+npm i --legacy-peer-deps
 https://pizza-blush-five.vercel.app/
+
+    "react-search-autocomplete": "^5.2.2",
 
 https://developers.google.com/maps/documentation/javascript/overview#javascript
 

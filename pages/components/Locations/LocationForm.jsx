@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as yup from 'yup'
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+// import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 let schema = yup.object().shape({
   location: yup.string().required(),
@@ -37,7 +37,7 @@ const LocationForm = props => {// ({ places, onMapCenter, errInp })
             <div 
               className="w-auto md:w-60 mx-5 md:-mt-2 focus:outline-none focus:ring-gray-500 focus:border-gray-500 border border-gray-300"
             >
-              <ReactSearchAutocomplete
+              {/* <ReactSearchAutocomplete
                 styling={{borderRadius: 'none', boxShadow: 'none', border: 'none'}}
                 items={props.places && props.places.places} //array of elements for searchin
                 onSearch={handleOnSearch}
@@ -46,7 +46,7 @@ const LocationForm = props => {// ({ places, onMapCenter, errInp })
                 autoFocus
                 type="text" 
                 placeholder="Fresno, CA"
-              />
+              /> */}
             </div>
           </div>
           {/* Error */}
