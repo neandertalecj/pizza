@@ -5,6 +5,8 @@ DELETED pugecss from configuration for trying on vercel purge: [],
 './pages/**/\*.{js,ts,jsx,tsx}', './components/**/\*.{js,ts,jsx,tsx}'
 !!!!!!!
 
+// const res = await fetch(menuUrl) //(`http://localhost:3000/api/menu`)
+
 deployed:
 npm i --legacy-peer-deps
 https://pizza-blush-five.vercel.app/

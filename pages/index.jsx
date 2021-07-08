@@ -1,3 +1,5 @@
+import absoluteUrl from 'next-absolute-url'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from './components/Layouts'
@@ -20,9 +22,10 @@ export default function Home({ data }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:3000/api/menu`)
-  const data = await res.json()
+export async function getServerSideProps({ req }) {  //context
+  const { origin } = absoluteUrl(req, "localhost:3000");
+  const resp = await fetch(`${origin}/api/menu`);
+  const data = await resp.json()
 
   if (!data) {
     return {
