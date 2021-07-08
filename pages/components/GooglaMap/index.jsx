@@ -28,7 +28,7 @@ export default function GoogleMap () {
     }
   }, [data])
 
-  // Setting of a google map center depends on choosing coordinate
+  // The setting of a google map center depends on choosing coordinate
   const handleMapCenter = loc => {
     if (!loc) {
       setErrInp('Required Field')

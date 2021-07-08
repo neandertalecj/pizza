@@ -39,7 +39,7 @@ const LocationForm = props => {// ({ places, onMapCenter, errInp })
             >
               <ReactSearchAutocomplete
                 styling={{borderRadius: 'none', boxShadow: 'none', border: 'none'}}
-                items={props.places.places} //array of elements for searchin
+                items={props.places.places || []} //array of elements for searchin
                 onSearch={handleOnSearch}
                 onSelect={handleOnSelect}
                 onClear={handleOnClear}
