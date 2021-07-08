@@ -23,7 +23,7 @@ export default function GoogleMap () {
 
   useEffect(() => {
     if (data) {
-      const res = data.reduce((acc, cur) =>  [...acc, { name:cur.store }], [])
+      const res = data.reduce((acc, cur) =>  [...acc, { name: cur.store, id: cur.id }], [])
       setPlaces(res)
     }
   }, [data])
@@ -32,14 +32,12 @@ export default function GoogleMap () {
   const handleMapCenter = loc => {
     if (!loc) {
       setErrInp('Required Field')
-      console.log('!loc')
     } else {
       const placeObj = data.find(el => {
-        console.log(el.store, loc.name)
         return el.store.trim() === loc.name.trim()
       })
 
-      setCenter({lat: placeObj.lat,lng: placeObj.lng})
+      setCenter({ lat: placeObj.lat,lng: placeObj.lng })
       setErrInp(null)
     }
   }
@@ -49,30 +47,31 @@ export default function GoogleMap () {
 
   return (
     <>
-      <Locations places={{places, errInp}} onMapCenter={handleMapCenter} />
+      <Locations places={places} onMapCenter={handleMapCenter} errInp={errInp} />
 
-      <div className="flex container mx-auto mt-5 mb-10">
-        {/* Listo of addresses */}
-        <div className="w-1/3 mr-8 h-96 overflow-y-scroll overflow-hidden">
+      <div className="flex flex-col  md:flex-row container mx-auto mt-5 mb-10">
+        
+        {/* List of addresses */}
+        <div className="md:w-1/3 md:mr-8 h-80 md:h-96 overflow-y-scroll overflow-hidden order-2 md:order-1  mt-5 md:mt-0">
           {data.map((item) => (
-            <div key={item.id}>
-              <h3 className="text-red-600 uppercase tracking-wider text-xl">{item.store}</h3>
+            <div key={item.id} className="text-center md:text-left">
+              <h3 className="text-red-600 uppercase tracking-wider md:text-xl">{item.store}</h3>
               <button
-                className="px-3 py-2 mt-3 mb-2 bg-gray-800 text-white uppercase hover:underline"
+                className="px-3 py-2 mt-3 mb-2 bg-gray-800 text-white uppercase hover:underline text-xs md:text-base"
               >Order online</button>
-              <div className="text-gray-900 font-roboto tracking-wider">{item.address}</div>
-              <div className="text-gray-900 font-roboto tracking-wider">
+              <div className="text-gray-900 font-roboto tracking-wider text-xs md:text-base">{item.address}</div>
+              <div className="text-gray-900 font-roboto tracking-wider text-xs md:text-base">
                 {item.city}, {item.state} {item.zip}
               </div>
               <div>{item.phone}</div>
-              <a href="" className="uppercase font-semibold">directions</a>
-              <div className="border-black border-b mt-3 mb-3"></div>
+              <a href="" className="uppercase font-semibold  text-xs md:text-base">directions</a>
+              <div className="border-black border-b mt-3 mb-3  text-xs md:text-base"></div>
             </div>
           ))}
         </div>
 
-        <div className="w-2/3">
-          {/* Google Map */}
+        {/* Google Map */}
+        <div className="md:w-2/3 mt-1 md:mt-0 order-1 md:order-2">
           <iframe
             className="w-full h-96"
             style={{border: '0'}}

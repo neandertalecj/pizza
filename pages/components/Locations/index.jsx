@@ -1,6 +1,6 @@
 const { default: LocationForm } = require("./LocationForm")
 
-const Locations = ({ places, onMapCenter }) => {
+const Locations = ({ places, onMapCenter, errInp }) => {
 
   return (
     <div className="bg-white">
@@ -13,7 +13,7 @@ const Locations = ({ places, onMapCenter }) => {
         </div>
      
         <div className="border border-black">
-          <LocationForm places={places} onMapCenter={onMapCenter} />
+          <LocationForm places={places} onMapCenter={onMapCenter} errInp={errInp} />
         </div>
 
       </div>
