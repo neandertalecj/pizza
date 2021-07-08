@@ -4,7 +4,7 @@ import Layout from './components/Layouts'
 import Intro from './components/Intro'
 import Safety from './components/Safety'
 import Offers from './components/Offers'
-import Locations from './components/Locations'
+// import Locations from './components/Locations'
 import GoogleMap from './components/GooglaMap'
 // import styles from '../styles/Home.module.css'
 
@@ -16,7 +16,7 @@ export default function Home({ data }) {
         <Intro />
         <Safety />
         <Offers />
-        <Locations />
+        {/* <Locations /> */}
         <GoogleMap />
       </Layout>
     </div>  

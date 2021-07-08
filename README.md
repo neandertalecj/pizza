@@ -10,6 +10,9 @@ https://pizza-blush-five.vercel.app/
 
 https://developers.google.com/maps/documentation/javascript/overview#javascript
 
+https://www.npmjs.com/package/react-search-autocomplete
+https://developers.google.com/maps/documentation/embed/embedding-map
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

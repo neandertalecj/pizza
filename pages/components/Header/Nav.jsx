@@ -2,7 +2,6 @@ import React from 'react'
 
 const Nav = ({ restMenu }) => {
   const { item, submenu } = restMenu || {}
-  console.log('NAV', restMenu)
   
   return <>
     <li className="group px-4 relative">
@@ -31,4 +30,4 @@ const Nav = ({ restMenu }) => {
   </>
 }
 
-export default React.memo(Nav)
+export default Nav
