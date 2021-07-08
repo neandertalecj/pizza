@@ -51,7 +51,7 @@ const LocationForm = props => {// ({ places, onMapCenter, errInp })
           </div>
           {/* Error */}
           <div className="text-red-600 capitalize font-thin flex py-2">
-            {props.places.errInp && <span>{props.places.errInp}</span>}
+            {props.places && <span>{props.places.errInp}</span>}
           </div>
         </div>
         {/* Select */}
