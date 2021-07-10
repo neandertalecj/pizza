@@ -4,7 +4,6 @@ import Footer from '../Footer'
 
 
 const Layout = ({  children, ...data }) => {
-  // console.log('LAYOUT', data.menu)
   return <>
       <Head>
         <title>App</title>

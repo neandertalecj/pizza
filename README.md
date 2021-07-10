@@ -7,7 +7,9 @@ DELETED pugecss from configuration for trying on vercel purge: [],
 
 deployed:
 npm i --legacy-peer-deps
-https://pizza-blush-five.vercel.app/
+pizza-git-main-neandertalecj.vercel.app
+pizza-woad.vercel.app
+pizza-neandertalecj.vercel.app
 
 https://developers.google.com/maps/documentation/javascript/overview#javascript
 

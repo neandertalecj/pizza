@@ -23,7 +23,6 @@ const LocationForm = ({ places, onMapCenter, errInp }) => {
   return (
     <>
       <div className="container flex flex-col md:flex-row md:items-baseline justify-center px-6 py-2 text-xsm font-roboto font-medium text-gray-600 uppercase">
-        
         {/* Search */}
         <div>
           <div className="flex flex-col md:flex-row md:items-center">
@@ -34,7 +33,7 @@ const LocationForm = ({ places, onMapCenter, errInp }) => {
             >
               <ReactSearchAutocomplete
                 styling={{borderRadius: 'none', boxShadow: 'none', border: 'none'}}
-                items={places} //array of elements for searchin
+                items={places} //array of elements for searching
                 onSearch={handleOnSearch}
                 onSelect={handleOnSelect}
                 onClear={handleOnClear}

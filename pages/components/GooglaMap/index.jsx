@@ -67,15 +67,24 @@ export default function GoogleMap () {
           {dataP && dataP.map((item) => (
             <div key={item.id} className="text-center md:text-left">
               <h3 className="text-red-600 uppercase tracking-wider md:text-xl">{item.store}</h3>
-              <button
-                className="px-3 py-2 mt-3 mb-2 bg-gray-800 text-white uppercase hover:underline text-xs md:text-base"
-              >Order online</button>
+              <button className="px-3 py-2 mt-3 mb-2 bg-gray-800 text-white uppercase hover:underline text-xs md:text-base">
+                <a href="https://meandeds28.intouchposonline.com/?_ga=2.178679331.626439164.1625863455-1967503621.1625492546" target="_blank">
+                  Order online
+                </a>
+              </button>
               <div className="text-gray-900 font-roboto tracking-wider text-xs md:text-base">{item.address}</div>
               <div className="text-gray-900 font-roboto tracking-wider text-xs md:text-base">
                 {item.city}, {item.state} {item.zip}
               </div>
-              <div>{item.phone}</div>
-              <a href="" className="uppercase font-semibold  text-xs md:text-base">directions</a>
+              <a href={`tel:${item.phone.replace(/\D+/g, '')}`}>
+                {item.phone}
+              </a>
+              <a href="https://www.google.com/maps/dir/4735+N+Blackstone+Ave,+Fresno,+CA+93726,+%D0%A1%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D1%96+%D0%A8%D1%82%D0%B0%D1%82%D0%B8+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8/4735+N+Blackstone+Ave,+Fresno,+CA+93726,+%D0%A1%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D1%96+%D0%A8%D1%82%D0%B0%D1%82%D0%B8+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8/@36.803922,-119.7930849,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80946787d07b98dd:0xdad0bfa4378bbe4d!2m2!1d-119.7908962!2d36.803922!1m5!1m1!1s0x80946787d07b98dd:0xdad0bfa4378bbe4d!2m2!1d-119.7908962!2d36.803922!3e0"
+                className="uppercase font-semibold  text-xs md:text-base block"
+                target="_blank"
+              >
+                directions
+              </a>
               <div className="border-black border-b mt-3 mb-3  text-xs md:text-base"></div>
             </div>
           ))}
