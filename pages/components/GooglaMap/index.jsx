@@ -7,8 +7,6 @@ async function fetchData(url) {
   const res = await fetch(url)
   return res.json()
 }
-// Base url for Google Map
-const baseUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDSHR1zHFPffAcFIsPOfEXAoPHandE31Ic&q=Space+Needle,Seattle+WA' 
 
 export default function GoogleMap () {
   const { data, error } = useSWR('/api/points', fetchData)
@@ -21,6 +19,7 @@ export default function GoogleMap () {
   useEffect(() => { setDataP(data) }, [data])
 
   useEffect(() => {
+    const baseUrl =`${process.env.NEXT_PUBLIC_GOOGLE_BASE_URL}?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&q=${process.env.NEXT_PUBLIC_GOOGLE_Q_PARAM}`// 
     // URL for Google map fatching with the center coordinate
     setUrl(`${baseUrl}&center=${center.lat}%2C${center.lng}`)
 
